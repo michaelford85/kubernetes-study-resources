@@ -19,7 +19,7 @@ spec:
       containers:
         - name: nginx-container
           image: nginx
-  replicas: 5
+  replicas: 8
   selector:
     matchLabels:
       type: front-end
