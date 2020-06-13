@@ -9,11 +9,11 @@ metadata:
 spec:
   containers:
     - name: postgres
-      image: postgres:9.4
+      image: postgres
       ports:
         - containerPort: 5432
       env:
         - name: POSTGRES_USER
-          value: postgres
+          value: "postgres"
         - name: POSTGRES_PASSWORD
-          value: postgres
+          value: "postgres"
