@@ -101,7 +101,14 @@
       <option name="project" value="LOCAL" />
       <updated>1592080704999</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="changed postgres image to 9.4">
+      <created>1592081204450</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1592081204450</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -122,22 +129,23 @@
     <MESSAGE value="Changed services to LoadBalancer from NodePort for Cloud Services" />
     <MESSAGE value="added postgres environment variable" />
     <MESSAGE value="changed postgres service name to db" />
-    <option name="LAST_COMMIT_MESSAGE" value="changed postgres service name to db" />
+    <MESSAGE value="changed postgres image to 9.4" />
+    <option name="LAST_COMMIT_MESSAGE" value="changed postgres image to 9.4" />
   </component>
   <component name="WindowStateProjectService">
     <state x="328" y="128" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1591844861318">
       <screen x="0" y="23" width="1280" height="721" />
     </state>
     <state x="328" y="128" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.23.1280.721@0.23.1280.721" timestamp="1591844861318" />
-    <state x="174" y="23" key="CommitChangelistDialog2" timestamp="1592080704737">
+    <state x="174" y="23" key="CommitChangelistDialog2" timestamp="1592081204138">
       <screen x="0" y="23" width="1280" height="724" />
     </state>
     <state x="174" y="23" key="CommitChangelistDialog2/0.23.1280.721@0.23.1280.721" timestamp="1591845587055" />
-    <state x="174" y="23" key="CommitChangelistDialog2/0.23.1280.724/1280.23.1920.1177@0.23.1280.724" timestamp="1592080704737" />
-    <state x="240" y="123" key="Vcs.Push.Dialog.v2" timestamp="1592080706867">
+    <state x="174" y="23" key="CommitChangelistDialog2/0.23.1280.724/1280.23.1920.1177@0.23.1280.724" timestamp="1592081204138" />
+    <state x="240" y="123" key="Vcs.Push.Dialog.v2" timestamp="1592081206050">
       <screen x="0" y="23" width="1280" height="724" />
     </state>
     <state x="240" y="123" key="Vcs.Push.Dialog.v2/0.23.1280.721@0.23.1280.721" timestamp="1591845589635" />
-    <state x="240" y="123" key="Vcs.Push.Dialog.v2/0.23.1280.724/1280.23.1920.1177@0.23.1280.724" timestamp="1592080706867" />
+    <state x="240" y="123" key="Vcs.Push.Dialog.v2/0.23.1280.724/1280.23.1920.1177@0.23.1280.724" timestamp="1592081206050" />
   </component>
 </project>
