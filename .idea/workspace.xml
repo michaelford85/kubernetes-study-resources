@@ -21,7 +21,7 @@
   <component name="ChangeListManager">
     <list default="true" id="8d14e06d-807c-4b87-8bd0-b4a4dfd7be76" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example-voting-app-kubernetes/postgres-pod.yml" beforeDir="false" afterPath="$PROJECT_DIR$/example-voting-app-kubernetes/postgres-pod.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example-voting-app-kubernetes/postgres-service.yml" beforeDir="false" afterPath="$PROJECT_DIR$/example-voting-app-kubernetes/postgres-service.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -87,7 +87,14 @@
       <option name="project" value="LOCAL" />
       <updated>1592078971035</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="added postgres environment variable">
+      <created>1592079950364</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1592079950364</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -106,22 +113,23 @@
     <MESSAGE value="added service definition" />
     <MESSAGE value="Added voting app" />
     <MESSAGE value="Changed services to LoadBalancer from NodePort for Cloud Services" />
-    <option name="LAST_COMMIT_MESSAGE" value="Changed services to LoadBalancer from NodePort for Cloud Services" />
+    <MESSAGE value="added postgres environment variable" />
+    <option name="LAST_COMMIT_MESSAGE" value="added postgres environment variable" />
   </component>
   <component name="WindowStateProjectService">
     <state x="328" y="128" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1591844861318">
       <screen x="0" y="23" width="1280" height="721" />
     </state>
     <state x="328" y="128" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.23.1280.721@0.23.1280.721" timestamp="1591844861318" />
-    <state x="174" y="23" key="CommitChangelistDialog2" timestamp="1592078970687">
+    <state x="174" y="23" key="CommitChangelistDialog2" timestamp="1592079950131">
       <screen x="0" y="23" width="1280" height="724" />
     </state>
     <state x="174" y="23" key="CommitChangelistDialog2/0.23.1280.721@0.23.1280.721" timestamp="1591845587055" />
-    <state x="174" y="23" key="CommitChangelistDialog2/0.23.1280.724/1280.23.1920.1177@0.23.1280.724" timestamp="1592078970687" />
-    <state x="240" y="123" key="Vcs.Push.Dialog.v2" timestamp="1592078972790">
+    <state x="174" y="23" key="CommitChangelistDialog2/0.23.1280.724/1280.23.1920.1177@0.23.1280.724" timestamp="1592079950131" />
+    <state x="240" y="123" key="Vcs.Push.Dialog.v2" timestamp="1592079952225">
       <screen x="0" y="23" width="1280" height="724" />
     </state>
     <state x="240" y="123" key="Vcs.Push.Dialog.v2/0.23.1280.721@0.23.1280.721" timestamp="1591845589635" />
-    <state x="240" y="123" key="Vcs.Push.Dialog.v2/0.23.1280.724/1280.23.1920.1177@0.23.1280.724" timestamp="1592078972790" />
+    <state x="240" y="123" key="Vcs.Push.Dialog.v2/0.23.1280.724/1280.23.1920.1177@0.23.1280.724" timestamp="1592079952225" />
   </component>
 </project>
