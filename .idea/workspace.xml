@@ -20,7 +20,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8d14e06d-807c-4b87-8bd0-b4a4dfd7be76" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/demos/service/service-definition.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example-voting-app-kubernetes/postgres-pod.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example-voting-app-kubernetes/postgres-service.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example-voting-app-kubernetes/redis-pod.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example-voting-app-kubernetes/redis-service.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example-voting-app-kubernetes/result-app-pod.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example-voting-app-kubernetes/result-service.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example-voting-app-kubernetes/voting-app-pod.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example-voting-app-kubernetes/voting-app-service.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example-voting-app-kubernetes/worker-app-pod.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -40,10 +48,11 @@
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/demos/deployment" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/example-voting-app-kubernetes" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/example-voting-app-kubernetes" />
       <recent name="$PROJECT_DIR$/demos/deployment" />
     </key>
   </component>
@@ -58,6 +67,14 @@
       <option name="presentableId" value="Default" />
       <updated>1591724634910</updated>
     </task>
+    <task id="LOCAL-00001" summary="added service definition">
+      <created>1591845587533</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1591845587533</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -72,10 +89,22 @@
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="added service definition" />
+    <option name="LAST_COMMIT_MESSAGE" value="added service definition" />
+  </component>
   <component name="WindowStateProjectService">
     <state x="328" y="128" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1591844861318">
       <screen x="0" y="23" width="1280" height="721" />
     </state>
     <state x="328" y="128" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.23.1280.721@0.23.1280.721" timestamp="1591844861318" />
+    <state x="174" y="23" key="CommitChangelistDialog2" timestamp="1591845587055">
+      <screen x="0" y="23" width="1280" height="721" />
+    </state>
+    <state x="174" y="23" key="CommitChangelistDialog2/0.23.1280.721@0.23.1280.721" timestamp="1591845587055" />
+    <state x="240" y="123" key="Vcs.Push.Dialog.v2" timestamp="1591845589635">
+      <screen x="0" y="23" width="1280" height="721" />
+    </state>
+    <state x="240" y="123" key="Vcs.Push.Dialog.v2/0.23.1280.721@0.23.1280.721" timestamp="1591845589635" />
   </component>
 </project>
