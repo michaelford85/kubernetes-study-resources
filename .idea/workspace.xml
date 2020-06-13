@@ -80,7 +80,14 @@
       <option name="project" value="LOCAL" />
       <updated>1592078206463</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Changed services to LoadBalancer from NodePort for Cloud Services">
+      <created>1592078971035</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1592078971035</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -106,15 +113,15 @@
       <screen x="0" y="23" width="1280" height="721" />
     </state>
     <state x="328" y="128" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.23.1280.721@0.23.1280.721" timestamp="1591844861318" />
-    <state x="174" y="23" key="CommitChangelistDialog2" timestamp="1592078206269">
+    <state x="174" y="23" key="CommitChangelistDialog2" timestamp="1592078970687">
       <screen x="0" y="23" width="1280" height="724" />
     </state>
     <state x="174" y="23" key="CommitChangelistDialog2/0.23.1280.721@0.23.1280.721" timestamp="1591845587055" />
-    <state x="174" y="23" key="CommitChangelistDialog2/0.23.1280.724/1280.23.1920.1177@0.23.1280.724" timestamp="1592078206269" />
-    <state x="240" y="123" key="Vcs.Push.Dialog.v2" timestamp="1592078208594">
+    <state x="174" y="23" key="CommitChangelistDialog2/0.23.1280.724/1280.23.1920.1177@0.23.1280.724" timestamp="1592078970687" />
+    <state x="240" y="123" key="Vcs.Push.Dialog.v2" timestamp="1592078972790">
       <screen x="0" y="23" width="1280" height="724" />
     </state>
     <state x="240" y="123" key="Vcs.Push.Dialog.v2/0.23.1280.721@0.23.1280.721" timestamp="1591845589635" />
-    <state x="240" y="123" key="Vcs.Push.Dialog.v2/0.23.1280.724/1280.23.1920.1177@0.23.1280.724" timestamp="1592078208594" />
+    <state x="240" y="123" key="Vcs.Push.Dialog.v2/0.23.1280.724/1280.23.1920.1177@0.23.1280.724" timestamp="1592078972790" />
   </component>
 </project>
