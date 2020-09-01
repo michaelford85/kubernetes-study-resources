@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: alpine-pod
+spec:
+  volumes:
+    - name: alpine-pv-storage
+      persistentVolumeClaim:
+        claimName: alpine-pv-claim
+  containers:
+    - name: alpine
+      image: alpine
+      volumeMounts:
+        - mountPath: /tmp
+          name: alpine-pv-storage
