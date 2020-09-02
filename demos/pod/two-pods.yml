@@ -4,7 +4,7 @@ kind: Pod
 metadata:
   name: flask-pod
   labels:
-    app: myapp
+    app: flask-app
     owner: mford
 spec:
   containers:
@@ -16,9 +16,26 @@ kind: Pod
 metadata:
   name: nginx-pod
   labels:
-    app: myapp
+    app: nginx-app
     owner: mford
 spec:
   containers:
     - name: nginx-container
       image: nginx
+---
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app: frontend
+  name: nginx-frontend
+spec:
+  ports:
+  - name: 80-80
+    port: 80
+    protocol: TCP
+    targetPort: 80
+    nodePort: 30080
+  selector:
+    app: flask-app
+  type: NodePort
