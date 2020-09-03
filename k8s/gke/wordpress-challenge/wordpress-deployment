@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: wordpress-deployment
+  labels:
+    app: deployment
+spec:
+  replicas: 5
+  selector:
+    matchLabels:
+      app: deployment
+      deployment: wordpress
+  template:
+    metadata:
+      labels:
+        deployment: wordpress
+        app: deployment
+    spec:
+      containers:
+      - name: wordpress-container
+        image: wordpress
+        envFrom:
+        - configMapRef:
+            name: wp-pass
