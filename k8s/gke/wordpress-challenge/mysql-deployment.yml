@@ -1,31 +1,31 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: wordpress-deployment
+  name: mysql-deployment
   labels:
     app: deployment
 spec:
-  replicas: 5
+  replicas: 1
   selector:
     matchLabels:
       app: deployment
-      deployment: wordpress
+      deployment: mysql
   template:
     metadata:
       labels:
-        deployment: wordpress
+        deployment: mysql
         app: deployment
     spec:
       containers:
-      - name: wordpress-container
-        image: wordpress
+      - name: mysql-container
+        image: mysql:5.7
         volumeMounts:
-        - mountPath: /var/www/html
-          name: wp-volume
+        - mountPath: /var/lib/mysql
+          name: mysql-volume
         envFrom:
         - configMapRef:
             name: wp-pass
       volumes:
-      - name: wp-volume
+      - name: mysql-volume
         persistentVolumeClaim:
-          claimName: wp-pvc
+          claimName: mysql-pvc

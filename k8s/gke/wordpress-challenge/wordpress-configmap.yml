@@ -4,3 +4,4 @@ metadata:
   name: wp-pass
 data:
   WORDPRESS_DB_PASSWORD: mysql-pass
+  MYSQL_ROOT_PASSWORD: mysql-pass
