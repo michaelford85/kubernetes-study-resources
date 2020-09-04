@@ -33,16 +33,16 @@ spec:
       containers:
       - name: wordpress-container
         image: wordpress
-        volumeMounts:
-        - mountPath: /var/www/html
-          name: wp-volume
+        # volumeMounts:
+        # - mountPath: /var/www/html
+        #   name: wp-volume
         env:
         - name: WORDPRESS_DB_HOST
           value: mysql-service
         envFrom:
         - configMapRef:
             name: wp-pass
-      volumes:
-      - name: wp-volume
-        persistentVolumeClaim:
-          claimName: wp-pvc
+      # volumes:
+      # - name: wp-volume
+      #   persistentVolumeClaim:
+      #     claimName: wp-pvc
