@@ -1,0 +1,58 @@
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: webserver
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: nginx-service
+  namespace: webserver
+spec:
+  type: LoadBalancer
+  selector:
+    deployment: nginx
+    app: deployment
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 80
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: nginx-service
+  namespace: webserver
+spec:
+  type: LoadBalancer
+  selector:
+    deployment: nginx
+    app: deployment
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 80
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nginx-deployment
+  namespace: webserver
+  labels:
+    app: deployment
+spec:
+  replicas: 10
+  selector:
+    matchLabels:
+      app: deployment
+      deployment: nginx
+  template:
+    metadata:
+      labels:
+        deployment: nginx
+        app: deployment
+    spec:
+      containers:
+      - name: nginx-container
+        image: nginx
