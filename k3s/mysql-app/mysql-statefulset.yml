@@ -15,7 +15,7 @@ spec:
       name: mysql-pod
       labels:
         app: mysql-app
-      spec:
-        containers:
-        - name: mysql
-          image: mysql
+    spec:
+      containers:
+      - name: mysql
+        image: mysql
