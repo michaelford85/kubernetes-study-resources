@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: mysql-statefulset
+  labels:
+    app: mysql-app
+spec:
+  serviceName: mysql-headless-service
+  replicas: 4
+  matchLabels:
+    app: mysql-app
+  template:
+    metadata:
+      name: mysql-pod
+      labels:
+        app: mysql-app
+      spec:
+        containers:
+        - name: mysql
+          image: mysql
