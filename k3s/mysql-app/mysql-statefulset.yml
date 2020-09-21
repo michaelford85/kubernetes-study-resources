@@ -7,8 +7,9 @@ metadata:
 spec:
   serviceName: mysql-headless-service
   replicas: 4
-  matchLabels:
-    app: mysql-app
+  selector:
+    matchLabels:
+      app: mysql-app
   template:
     metadata:
       name: mysql-pod
