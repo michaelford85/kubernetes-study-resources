@@ -6,7 +6,7 @@ metadata:
 spec:
   containers:
   - name: dnsutils
-    image: gcr.io/kubernetes-e2e-test-images/dnsutils
+    image: gcr.io/kubernetes-e2e-test-images/dnsutils:2.2
     command:
       - sleep
       - "3600"
