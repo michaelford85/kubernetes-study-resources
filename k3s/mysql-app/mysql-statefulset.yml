@@ -18,4 +18,7 @@ spec:
     spec:
       containers:
       - name: mysql
-        image: biarms/mysql
+        image: phpmyadmin
+        env:
+        - name: MYSQL_ROOT_PASSWORD
+          value: password
