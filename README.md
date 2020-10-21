@@ -1,6 +1,5 @@
 <p align="center">
-  <img width="512" height="91" title="Kubernetes Logo" src="images/kubernetes_logo.png"><br>
-  <b>Networking Links</b><br>
+  <img width="512" height="91" title="Kubernetes Logo" src="images/Kubernetes_logo.svg">
 </p>
 
 ---
