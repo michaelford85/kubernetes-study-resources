@@ -6,7 +6,7 @@
 
 Resources to begin learning Kubernetes.
 
-## Kubernetes Sandbox
+## Setting up your Kubernetes Sandbox
 
 For low-cost, easy-to-deploy sandboxing, I suggest using k3s. k3s is a lightweight production-grade Certified Kubernetes distribution. More info can be found at https://k3s.io/.
 
@@ -36,13 +36,15 @@ Install Vagrant:
 $ brew cask install vagrant
 ```
 
-install kubectl
+install kubectl:
 
 ```sh
 $ brew install kubernetes-cli
 ```
 
-Finally, this blog post describes instructions for spinning up a 3-node Kubernetes cluster on your local machine, using a pre-written VagrantFile:
+### Deploy your local Kubernetes cluster with Virtualbox and Vagrant
+
+Finally, this blog post describes instructions for spinning up and connecting to a 3-node Kubernetes cluster on your local machine, using a pre-written VagrantFile:
 
 [Kubernetes the Easy Way with k3s!](http://devnetstack.com/kubernetes-the-easy-way-with-k3s/) by [Michael Saenz](https://github.com/michaelc0n)
 
