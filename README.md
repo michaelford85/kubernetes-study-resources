@@ -8,11 +8,44 @@ Resources to begin learning Kubernetes.
 
 ## Kubernetes Sandbox
 
-For low-cost, easy sandboxing, I suggest using k3s. k3s is a lightweight production-grade Certified Kubernetes distribution. More info. can be found at https://k3s.io/.
+For low-cost, easy-to-deploy sandboxing, I suggest using k3s. k3s is a lightweight production-grade Certified Kubernetes distribution. More info can be found at https://k3s.io/.
 
-This blog post describes instructions for spinning up a 3-node Kubernetes cluster on your local machine, using VirtualBox and Vagrant:
+You will need three components to deploy and manage your local k3s cluster:
+
+- VirtualBox: a free and open-source hosted hypervisor for x86 virtualization, developed by Oracle Corporation
+- Vagrant: an open-source software product for building and maintaining portable virtual software development environments; e.g., for VirtualBox
+- kubectl: The Kubernetes command-line tool, which allows you to run commands against Kubernetes clusters.
+
+If you are using a Mac, Homebrew Package Manager is a great way to install these packages with little complication, all from the command line.
+
+[Install Homebrew on Mac](https://brew.sh/)
+
+Once you have Homebrew installed, getting Virtualbox, Vagrant, and kubectl installed becomes very simple:
+
+### Install Virtualbox, Vagrant, and kubectl for MacOSX
+
+Install VirtualBox:
+
+```sh
+$ brew cask install virtualbox
+```
+
+Install Vagrant:
+
+```sh
+$ brew cask install vagrant
+```
+
+install kubectl
+
+```sh
+$ brew install kubernetes-cli
+```
+
+Finally, this blog post describes instructions for spinning up a 3-node Kubernetes cluster on your local machine, using a pre-written VagrantFile:
 
 [Kubernetes the Easy Way with k3s!](http://devnetstack.com/kubernetes-the-easy-way-with-k3s/) by [Michael Saenz](https://github.com/michaelc0n)
+
 
 <!-- - [Linux Networking Explained](https://events.static.linuxfound.org/sites/events/files/slides/2016%20-%20Linux%20Networking%20explained_0.pdf) by [tgraf](https://github.com/tgraf)
 - [An In-Depth Guide to iptables, the Linux Firewall](https://www.booleanworld.com/depth-guide-iptables-linux-firewall/) by [supriyo-biswas](https://github.com/supriyo-biswas)
