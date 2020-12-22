@@ -9,4 +9,4 @@ This repository contains resources to begin learning Kubernetes. The links and c
 # Table Of Contents
 - [Kubernetes Certification and Study](readme/certification_and_study.md)
 - [Building your Kubernetes Cluster for Studying](readme/building_the_cluster.md)
-- [Kubernetes Links](readme/kubernetes_links.md)
+- [Useful Kubernetes Links](readme/kubernetes_links.md)
