@@ -2,19 +2,25 @@
 
 For low-cost, easy-to-deploy sandboxing, I suggest using k3s. k3s is a lightweight production-grade Certified Kubernetes distribution. More info can be found at https://k3s.io/.
 
-You will need three components to deploy and manage your local k3s cluster:
+You can set up k3s on multiple platforms:
+
+## Set up k3s on MacOS:
+
+The first option is to set up k3s locally on your MacOS machine. The benefit here is that it is very easy to deploy a frech cluster whenever you wish. The tradeoff here is that external connections to k3s objects (services, ingress) are not supported.
+
+You will need three components to deploy and manage a local MacOS-based k3s cluster:
 
 - VirtualBox: a free and open-source hosted hypervisor for x86 virtualization, developed by Oracle Corporation
 - Vagrant: an open-source software product for building and maintaining portable virtual software development environments; e.g., for VirtualBox
 - kubectl: The Kubernetes command-line tool, which allows you to run commands against Kubernetes clusters.
 
-If you are using a Mac, Homebrew Package Manager is a great way to install these packages with little complication, all from the command line.
+For MacOS, Homebrew Package Manager is a great way to install these packages with little complication, all from the command line.
 
 [Install Homebrew on Mac](https://brew.sh/)
 
 Once you have Homebrew installed, getting Virtualbox, Vagrant, and kubectl installed becomes very simple:
 
-## Install Virtualbox, Vagrant, and kubectl for MacOSX
+### Install Virtualbox, Vagrant, and kubectl for MacOS
 
 Install VirtualBox:
 
@@ -34,11 +40,18 @@ install kubectl:
 $ brew install kubernetes-cli
 ```
 
-## Deploy your local Kubernetes cluster with Virtualbox and Vagrant
+### Deploy your local Kubernetes cluster with Virtualbox and Vagrant
 
 Finally, this blog post describes instructions for spinning up and connecting to a 3-node Kubernetes cluster on your local machine, using a pre-written VagrantFile:
 
 [Kubernetes the Easy Way with k3s!](http://devnetstack.com/kubernetes-the-easy-way-with-k3s/) by [Michael Saenz](https://github.com/michaelc0n)
+
+## Set up k3s on Raspberry Pi:
+
+[Alex Ellis](https://www.alexellis.io/), a Cloud Architect and Consultant, has put together a buy list and instructions for deploying k3s on a Raspberry Pi cluster. Those instructions can be found [here](https://blog.alexellis.io/test-drive-k3s-on-raspberry-pi/). One thing to keep in mind here is that Raspberry Pi uses the [ARM CPU architecture](https://en.wikipedia.org/wiki/ARM_architecture), which will likely limit the container images that you can deploy.
+
+## Set up k3s on Atomic Pi:
+[Dan Garfield](https://github.com/todaywasawesome), CTO at CodeFresh, has documented a way to get the benefits of a local cluster with k3s that is accessible from an external machine, but with an [x86 architecture](https://en.wikipedia.org/wiki/X86). This requires the use of the [Atomic Pi](https://www.amazon.com/Atomic-Pi-High-Speed-Peripheral/dp/B07N298F2B). The writeup for running k3s on an Atomic Pi cluster can be found [here](https://github.com/todaywasawesome/atomic-cluster).
 
 
 <!-- - [Linux Networking Explained](https://events.static.linuxfound.org/sites/events/files/slides/2016%20-%20Linux%20Networking%20explained_0.pdf) by [tgraf](https://github.com/tgraf)
