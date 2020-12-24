@@ -4,9 +4,9 @@ This document lists the software requirements needed to set up this demonstratio
 
 
 # Table Of Contents
-- [Why a certification?](#why_a_cert)
-<!-- - [Software Requirements](#requirements)
-- [Variables](#variables)
+<!-- - [Why a certification?](#why_a_cert) -->
+- [Certification Study Resources](#cert_study_resources)
+<!-- - [Variables](#variables)
   * [default-vars.yml](#default-variables)
   * [linux_users.yml](#linux-users)
 - [Credentials](#credentials)
@@ -16,4 +16,13 @@ This document lists the software requirements needed to set up this demonstratio
   * [tower_creds.yml](#tower-credentials)
   * [vault_creds.yml](#hashicorp-vault-credentials) -->
 
-## why_a_cert
+<!-- ## why_a_cert -->
+
+## cert_study_resources
+
+These are the resources I recommend for preparing for the Certified Kubernetes Application Developer Exam:
+### KodeKloud
+
+### Kubernetes in Action by Manning Publications
+
+### Killer.sh Exam simulator
