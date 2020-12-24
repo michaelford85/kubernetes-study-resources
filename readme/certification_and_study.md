@@ -18,7 +18,7 @@ This document lists the software requirements needed to set up this demonstratio
 
 <!-- ## why_a_cert -->
 
-## cert_study_resources
+## Certification Study Resources
 
 These are the resources I recommend for preparing for the Certified Kubernetes Application Developer Exam:
 ### KodeKloud
