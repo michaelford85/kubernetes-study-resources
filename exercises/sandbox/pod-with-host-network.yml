@@ -8,5 +8,8 @@ spec:
   - name: main
     image: alpine
     command: ["/bin/sleep", "999999"]
-    securityContext:
-      runAsNonRoot: true
+    resources:
+      requests:
+        cpu: "1.5"
+#    securityContext:
+#      runAsNonRoot: true

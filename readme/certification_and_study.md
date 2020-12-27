@@ -1,10 +1,10 @@
 # Cloud Native Computing Foundation Certifications and Study Resources
 
-This document lists the software requirements needed to set up this demonstration, and the variables/credentials needed to run the ansible playbooks properly.
+Why should you bother with a Kubernetes certification? Where can you find resources to study for industry recognized Kubernetes exams? You'll find these answers here.
 
 
 # Table Of Contents
-<!-- - [Why a certification?](#why_a_cert) -->
+- [Why a certification?](#why_a_cert)
 - [Certification Study Resources](#cert_study_resources)
 <!-- - [Variables](#variables)
   * [default-vars.yml](#default-variables)
@@ -16,13 +16,16 @@ This document lists the software requirements needed to set up this demonstratio
   * [tower_creds.yml](#tower-credentials)
   * [vault_creds.yml](#hashicorp-vault-credentials) -->
 
-<!-- ## why_a_cert -->
+## Why a Certification?
+
+
 
 ## Certification Study Resources
 
 These are the resources I recommend for preparing for the Certified Kubernetes Application Developer Exam:
+
 ### KodeKloud
 
-### Kubernetes in Action by Manning Publications
+### Kubernetes in Action by Marko Luksa (Manning Publications)
 
 ### Killer.sh Exam simulator

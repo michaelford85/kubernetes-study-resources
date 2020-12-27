@@ -8,6 +8,8 @@ Kubernetes recommended reading list.
 ## General links
 
 [kubectl Commands Cheat Sheet](https://swissarmydevops.com/containers/kubernetes/kubernetes-cheat-sheet)
+[The difference between Megabytes and Mibibytes](https://www.gbmb.org/blog/what-is-the-difference-between-megabytes-and-mebibytes-32)
+[Kubernetes Metrics Server](https://github.com/kubernetes-sigs/metrics-server)
 
 ## Kubernetes networking
 
