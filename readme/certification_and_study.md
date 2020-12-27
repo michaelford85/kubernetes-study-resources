@@ -10,6 +10,8 @@ Why should you bother with a Kubernetes certification? Where can you find resour
 # Table Of Contents
 [Why obtain a certification?](#why-obtain-a-certification)
 
+[List of CNCF Certifications](#why-obtain-a-certification)
+
 [Certification Study Resources](#certification-study-resources)
 
 * [KodeKloud](#kodekloud)
@@ -29,6 +31,15 @@ Why should you bother with a Kubernetes certification? Where can you find resour
 
 In my personal journey to brand myself as a specialist in cloud-native technologies, I've found industry standard certifications to serve two purposes (that would apply to most people). First, it's a way of gauging one's level of k8s knowledge against a standardized benchmark; passing the Certified Kubernetes Application Developer exam lets me know I've achieved a defined level of expertise. Secondly, having an industry standard certification provides a level of credibility with my customers and colleagues before I open my mouth. Both of these objectives can be achieved without the expense/time of a postgraduate University program, and with minimal cost - you might pay for a subscription to a self-paced learning resource, minimal cloud costs for access to a k8s cluster, or a relatively small up front cost for a local k8s/k3s cluster).
 
+## List of CNCF Certifications
+
+### Certified Kubernetes Application Developer (CKAD)
+
+### Certified Kubernetes Administrator (CKA)
+
+### Kubernetes Certified Service Provider (KCSP)
+
+### Certified Kubernetes Security Specialist (CKS)
 
 ## Certification Study Resources
 
