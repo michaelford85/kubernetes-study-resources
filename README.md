@@ -1,5 +1,5 @@
 <p align="center">
-  <img width="512" height="91" title="Kubernetes Logo" src="images/Kubernetes_logo.svg">
+  <img width="512" height="91" title="Kubernetes Logo" src="images/Kubernetes-logo-white.png">
 </p>
 
 ---
