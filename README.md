@@ -1,7 +1,10 @@
-<p align="center">
+<!-- <p align="center">
   <img width="512" height="91" title="Kubernetes Logo" src="images/kubernetes-logo-white.png">
-</p>
+</p> -->
 
+<p align="center">
+  <img title="Kubernetes Logo" src="images/kubernetes-logo-white.png">
+</p>
 ---
 
 This repository contains resources to begin learning Kubernetes. The links and contents here will reflect my own journey to mastering kubernetes and microservices.
