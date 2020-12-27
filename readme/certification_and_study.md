@@ -14,7 +14,7 @@ Why should you bother with a Kubernetes certification? Where can you find resour
 
 * [KodeKloud](#kodekloud)
 * [Kubernetes in Action by Marko Luksa](#kubernetes-in-action-by-marko-luksa)
-* [Killer.sh Exam simulator](#killer-exam-simulator)
+* [Killer.sh Exam simulator](#killersh-exam-simulator)
 <!-- - [Variables](#variables)
   * [default-vars.yml](#default-variables)
   * [linux_users.yml](#linux-users)
