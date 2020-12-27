@@ -1,9 +1,5 @@
-<!-- <p align="center">
-  <img width="512" height="91" title="Kubernetes Logo" src="images/kubernetes-logo-white.png">
-</p> -->
-
 <p align="center">
-  <img height="150" title="Kubernetes Logo" src="images/k8s_logo_with_border.png">
+  <img height="200" title="Kubernetes Logo" src="images/k8s_logo_with_border.png">
 </p>
 ---
 

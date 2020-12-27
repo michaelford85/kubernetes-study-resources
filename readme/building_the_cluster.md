@@ -1,3 +1,8 @@
+<p align="center">
+  <img height="200" title="Kubernetes Logo" src="images/k8s_logo_with_border.png">
+</p>
+---
+
 # Setting up your Kubernetes Sandbox
 
 For low-cost, easy-to-deploy sandboxing, I suggest using k3s. k3s is a lightweight production-grade Certified Kubernetes distribution. More info can be found at https://k3s.io/.

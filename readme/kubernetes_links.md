@@ -1,7 +1,8 @@
-
 <p align="center">
-  <img width="512" height="91" title="Kubernetes Logo" src="../images/Kubernetes_logo.svg">
+  <img height="200" title="Kubernetes Logo" src="images/k8s_logo_with_border.png">
 </p>
+---
+
 
 Kubernetes recommended reading list.
 
