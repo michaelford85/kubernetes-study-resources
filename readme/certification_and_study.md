@@ -4,7 +4,7 @@ Why should you bother with a Kubernetes certification? Where can you find resour
 
 
 # Table Of Contents
-- [Why a certification?](#why_a_cert)
+- [Why obtain a certification?](#why_a_cert)
 - [Certification Study Resources](#cert_study_resources)
 <!-- - [Variables](#variables)
   * [default-vars.yml](#default-variables)
@@ -16,8 +16,9 @@ Why should you bother with a Kubernetes certification? Where can you find resour
   * [tower_creds.yml](#tower-credentials)
   * [vault_creds.yml](#hashicorp-vault-credentials) -->
 
-## Why a Certification?
+## Why obtain a Certification?
 
+In my personal journey to brand myself as a specialist in cloud-native technologies, I've found industry standard certifications to serve two purposes (that would apply to most people). First, it's a way of gauging one's level of k8s knowledge against a standardized benchmark; passing the Certified Kubernetes Application Developer exam lets me know I've achieved a defined level of expertise. Secondly, having an industry standard certification provides a level of credibility with my customers and colleagues before I open my mouth. Both of these objectives can be achieved without the expense/time of a postgraduate University program, and with minimal cost - you might pay for a subscription to a self-paced learning resource, minimal cloud costs for access to a k8s cluster, or a relatively small up front cost for a local k8s/k3s cluster). 
 
 
 ## Certification Study Resources
