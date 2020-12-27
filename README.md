@@ -3,7 +3,7 @@
 </p> -->
 
 <p align="center">
-  <img title="Kubernetes Logo" src="images/k8s_logo.png">
+  <img height="150" title="Kubernetes Logo" src="images/k8s_logo.png">
 </p>
 ---
 
