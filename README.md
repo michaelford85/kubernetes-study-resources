@@ -1,7 +1,6 @@
 <p align="center">
   <img height="200" title="Kubernetes Logo" src="images/k8s_logo_with_border.png">
 </p>
----
 
 This repository contains resources to begin learning Kubernetes. The links and contents here will reflect my own journey to mastering kubernetes and microservices.
 
