@@ -7,13 +7,13 @@ Kubernetes recommended reading list.
 
 ## General links
 
-[kubectl Commands Cheat Sheet](https://swissarmydevops.com/containers/kubernetes/kubernetes-cheat-sheet)
-[The difference between Megabytes and Mibibytes](https://www.gbmb.org/blog/what-is-the-difference-between-megabytes-and-mebibytes-32)
-[Kubernetes Metrics Server](https://github.com/kubernetes-sigs/metrics-server)
+- [kubectl Commands Cheat Sheet](https://swissarmydevops.com/containers/kubernetes/kubernetes-cheat-sheet)
+- [The difference between Megabytes and Mibibytes](https://www.gbmb.org/blog/what-is-the-difference-between-megabytes-and-mebibytes-32)
+- [Kubernetes Metrics Server](https://github.com/kubernetes-sigs/metrics-server)
 
 ## Kubernetes networking
 
-[Kubernetes Networking Reference Links](https://github.com/michaelford85/kubernetes-networking-links) (forked from [Nicolas Leiva](https://github.com/nleiva/kubernetes-networking-links) with my additions)
+- [Kubernetes Networking Reference Links](https://github.com/michaelford85/kubernetes-networking-links) (forked from [Nicolas Leiva](https://github.com/nleiva/kubernetes-networking-links) with my additions)
 
 <!--
 - [Linux Networking Explained](https://events.static.linuxfound.org/sites/events/files/slides/2016%20-%20Linux%20Networking%20explained_0.pdf) by [tgraf](https://github.com/tgraf)
