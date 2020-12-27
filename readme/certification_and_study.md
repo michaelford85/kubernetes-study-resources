@@ -8,8 +8,13 @@ Why should you bother with a Kubernetes certification? Where can you find resour
 
 
 # Table Of Contents
-- [Why obtain a certification?](#why_a_cert)
-- [Certification Study Resources](#cert_study_resources)
+[Why obtain a certification?](#why-obtain-a-certification)
+
+[Certification Study Resources](#certification-study-resources)
+
+* [KodeKloud](#kodekloud)
+* [Kubernetes in Action by Marko Luksa](#kubernetes-in-action-by-marko-luksa)
+* [Killer Exam simulator](#killer-exam-simulator)
 <!-- - [Variables](#variables)
   * [default-vars.yml](#default-variables)
   * [linux_users.yml](#linux-users)
@@ -31,6 +36,6 @@ These are the resources I recommend for preparing for the Certified Kubernetes A
 
 ### KodeKloud
 
-### Kubernetes in Action by Marko Luksa (Manning Publications)
+### Kubernetes in Action by Marko Luksa
 
-### Killer.sh Exam simulator
+### Killer Exam simulator
