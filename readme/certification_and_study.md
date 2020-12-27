@@ -14,7 +14,6 @@ Why should you bother with a Kubernetes certification? Where can you find resour
 
 * [Certified Kubernetes Application Developer (CKAD)](#certified-kubernetes-application-developer-ckad)
 * [Certified Kubernetes Administrator (CKA)](#certified-kubernetes-administrator-cka)
-* [Kubernetes Certified Service Provider (KCSP)](#kubernetes-certified-service-provider-kcsp)
 * [Certified Kubernetes Security Specialist (CKS)](#certified-kubernetes-security-specialist-cks)
 
 [Certification Study Resources](#certification-study-resources)
@@ -41,8 +40,6 @@ In my personal journey to brand myself as a specialist in cloud-native technolog
 ### Certified Kubernetes Application Developer (CKAD)
 
 ### Certified Kubernetes Administrator (CKA)
-
-### Kubernetes Certified Service Provider (KCSP)
 
 ### Certified Kubernetes Security Specialist (CKS)
 
