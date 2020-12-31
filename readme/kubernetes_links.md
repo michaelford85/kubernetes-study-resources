@@ -4,6 +4,9 @@
 
 Kubernetes recommended reading list.
 
+## Useful Tips/Commands
+- `kubectl explain [k8s object] --recursive | less` - This lists ALL of the manifest options for the given k8s object in a vim output; you can then search throughout in order to confirm/learn specific options.
+
 ## General links
 
 - [kubectl Commands Cheat Sheet (Swiss Army DevOps)](https://swissarmydevops.com/containers/kubernetes/kubernetes-cheat-sheet)
