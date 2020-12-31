@@ -5,7 +5,8 @@
 Kubernetes recommended reading list.
 
 ## Useful Tips/Commands
-- `kubectl explain [k8s object] --recursive | less` - This lists ALL of the manifest options for the given k8s object in a vim output; you can then search throughout in order to confirm/learn specific options.
+- `$kubectl explain [k8s object] --recursive | less` - This lists ALL of the manifest options for the given k8s object in a vim output; you can then search throughout in order to confirm/learn specific options.
+- `$kubectl create [k8s object] --dry-run=client -o yaml > manifest.yml` - This command is useful when you wish to create a kubernetes manifest with options that cannot be added on the command line, and you want to avoid creating a manifest file from scratch. The YAML manifest will output to the specified file, which you can then edit with your favorite editor and then invoke via the `$kubectl create -f manifest.yml` command.
 
 ## General links
 
