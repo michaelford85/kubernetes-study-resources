@@ -1,0 +1,10 @@
+  containers:
+  - image: busybox
+    name: busybox
+    command: ["ls"]
+    args:
+    - /var
+    resources: {}
+  dnsPolicy: ClusterFirst
+  restartPolicy: Always
+status: {}
