@@ -4,7 +4,7 @@
 
 
 
-The barrier of entry to learning Kubernetes has never been lower. You can spin up an on-demand k8s cluster in your favorite cloud provider (I personally prefer Google Kubernetes Engine as they offer a $300 credit for creating a GCP account as of this writing). Alternatively, you can set up a very small cluster in your home for study purposes, and I will walk through those options here.
+The barrier of entry to learning Kubernetes has never been lower. You can spin up an on-demand k8s cluster in your favorite cloud provider (I personally prefer Google Kubernetes Engine as they offer a $300 credit for creating a GCP account as of this writing, and their web-based cloud shell makes configuration of the k8s cluster very easy). Alternatively, you can set up a very small cluster in your home for study purposes, and I will walk through those options here.
 
 # Setting up your local Kubernetes cluster
 
