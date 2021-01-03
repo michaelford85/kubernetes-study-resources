@@ -2,25 +2,29 @@
   <img height="200" title="Kubernetes Logo" src="images/k8s_logo_with_border.png">
 </p>
 
-Kubernetes recommended reading list.
+Kubernetes CKAD exam tips and useful learning links list.
 
 ## Useful Tips/Commands for the CKAD Exam
 
-### General tips:
-- When you start the exam, I recommend inputting the linux command, `$alias k=kubectl`. Not having to type in `kubectl` all the time both shaves seconds off of your exam time, and removes a tedious part of the exam.
-- Specifying the namespace at the beginning of a kubectl command makes it easier to manipulate a command later on. For example:
+### General exam tips:
+- **Read through the FAQs for the CNCF Kubernetes Certification Exams:** Make sure to read through everything in these [publicly available FAQs](https://docs.linuxfoundation.org/tc-docs/certification/faq-cka-ckad-cks) so that you know about the environment, what resources you have access to, how the exam is proctered, etc.
+- **Know how to navigate the kubernetes.io documentation:** When taking the CKAD exam, you are allowed a single additional tab, in which you can navigate to https://kubernetes.io/docs/ and all its subdomains. If you try to search for a topic, this will actually put you at https://kubernetes.io/docs/search/, which is against the rules. I suggest knowing how to navigate to things without searching. Most of what you'll need can be found under the *Concepts* and *Tasks* section of the documentation home.
+- When you start the exam, I recommend inputting the linux command, `$alias k=kubectl`, which allows you to type `k` rather than `kubectl`. Not having to type in `kubectl` all the time both shaves seconds off of your exam time, makes the experience less tedious.
+- Specifying the namespace at the *beginning* of a kubectl command (rather than at the end, which is what I did when first learning) makes it easier to manipulate a command later on as changes usually are made at the end of a CLI command. For example:
   - `$kubectl -n <namespace> run busyboxpod --image=busybox`
+    - Getting pod status becomes a lot easier here if after pressing the up key, you simply have to delete  the run portion and type `$kubectl -n <namespace> get pods`.
+
 
 
 ### Useful kubectl commands:
 - [kubectl Commands Cheat Sheet (Swiss Army DevOps)](https://swissarmydevops.com/containers/kubernetes/kubernetes-cheat-sheet)
-- [kubectl Commands Cheat Sheet (A Cloud Guru/Linux Academy)](https://linuxacademy.com/site-content/uploads/2019/04/Kubernetes-Cheat-Sheet_07182019.pdf) 
+- [kubectl Commands Cheat Sheet (A Cloud Guru/Linux Academy)](https://linuxacademy.com/site-content/uploads/2019/04/Kubernetes-Cheat-Sheet_07182019.pdf)
 - `$kubectl explain <k8s object> --recursive | less` - This lists ALL of the manifest options for the given k8s object in a vim output; you can then search throughout in order to confirm/learn specific options.
-- `$kubectl create <k8s object> --dry-run=client -o yaml > manifest.yml` - This command is useful when you wish to create a kubernetes manifest with options that cannot be added on the command line, and you want to avoid creating a manifest file from scratch. The YAML manifest will output to the specified file, which you can then edit with your favorite editor and then invoke via the `$kubectl create -f manifest.yml` command.
-- `kubectl run tmp --rm --image=busybox -i -- wget -O- <host>:<port>`: Creates a temporary pod in the specified namespace that can wget a host. Helpful when you want to determine if a service/pod is accessible.
--  `kubectl run tmp --image=curlimages/curl --rm -i  -- <host>:<port>`: Creates a temporary pod in the specified namespace that can curl a host. Helpful when you want to determine if a service/pod is accessible.
-- `kubectl -n <namespace> get ep`: get endpoints of all services in the specified namspace. This is a quick way to ensure that your service is selecting your intended pods.
-- `k annotate <k8s object> -l key=value app:"this is the way"`: Quickly annotate several pods, a deployment, etc. You can use the selector (`-l`) argument to quickly annotate several pods at once.
+- `$kubectl create <k8s object> --dry-run=client -o yaml > manifest.yml` - This command is useful when you wish to create a kubernetes manifest with options that cannot be added on the command line, and you want to avoid creating a manifest file from scratch (which you should never have to do). The YAML manifest will output to the specified file, which you can then edit with your favorite editor and then invoke via the `$kubectl create -f manifest.yml` command.
+- `$kubectl run tmp --rm --image=busybox -i -- wget -O- <host>:<port>`: Creates a temporary pod in the specified namespace that can `wget` a host. Helpful when you want to determine if a service/pod is accessible.
+-  `$kubectl run tmp --image=curlimages/curl --rm -i  -- <host>:<port>`: Creates a temporary pod in the specified namespace that can `curl` a host. Helpful when you want to determine if a service/pod is accessible.
+- `$kubectl -n <namespace> get ep`: get endpoints of all services in the specified namspace. This is a quick way to ensure that your service is selecting your intended pods.
+- `$kubectl annotate <k8s object> -l key=value app:"this is the way"`: Quickly annotate several pods, a deployment, etc. You can use the selector (`-l`) argument to quickly annotate several pods at once.
 
 
 ## General links

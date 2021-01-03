@@ -2,7 +2,11 @@
   <img height="200" title="Kubernetes Logo" src="images/k8s_logo_with_border.png">
 </p>
 
-# Setting up your Kubernetes Sandbox
+
+
+The barrier of entry to learning Kubernetes has never been lower. You can spin up an on-demand k8s cluster in your favorite cloud provider (I personally prefer Google Kubernetes Engine as they offer a $300 credit for creating a GCP account as of this writing). Alternatively, you can set up a very small cluster in your home for study purposes, and I will walk through those options here.
+
+# Setting up your local Kubernetes cluster
 
 For low-cost, easy-to-deploy sandboxing, I suggest using k3s. k3s is a lightweight production-grade Certified Kubernetes distribution. More info can be found at https://k3s.io/.
 
@@ -10,7 +14,7 @@ You can set up k3s on multiple platforms:
 
 ## Set up k3s on MacOS:
 
-The first option is to set up k3s locally on your MacOS machine. The benefit here is that it is very easy to deploy a frech cluster whenever you wish. The tradeoff here is that external connections to k3s objects (services, ingress) are not supported.
+The first option is to set up k3s locally on your MacOS machine. The benefit here is that it is very easy to deploy a fresh cluster whenever you wish, and tear it down just as easily. The tradeoff here is that external connections to k3s objects (services, ingress) are not supported.
 
 You will need three components to deploy and manage a local MacOS-based k3s cluster:
 
