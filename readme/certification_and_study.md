@@ -16,7 +16,7 @@ Why should you bother with a Kubernetes certification? Where can you find resour
 * [Certified Kubernetes Administrator (CKA)](#certified-kubernetes-administrator-cka)
 * [Certified Kubernetes Security Specialist (CKS)](#certified-kubernetes-security-specialist-cks)
 
-[Certification Study Resources](#ckad-certification-study-resources)
+[CKAD Certification Study Resources](#ckad-certification-study-resources)
 
 * [KodeKloud](#kodekloud)
 * [Kubernetes in Action by Marko Luksa](#kubernetes-in-action-by-marko-luksa)
