@@ -28,7 +28,8 @@ Kubernetes CKAD exam tips and useful learning links list.
 - Creating a DaemonSet imperatively:
   As a DaemonSet cannot be created imperatively directly, you can start by using an imperative command to create a deployment:
   - `$ kubectl create deployment nginxds --image=nginx --dry-run=client -o yaml > daemonset.yml`
-  From there, remove the `replicas: 1` and `status: {}` lines from the file, and replace `Deployment` with `Daemonset`. You can now deploy the DaemonSet with the command `$ kubectl create -f daemonset.yml`
+  - From there, remove the `replicas: 1` and `status: {}` lines from the file, and replace `Deployment` with `Daemonset`.
+  - You can now deploy the DaemonSet with the command `$ kubectl create -f daemonset.yml`
 
 
 ## General links
