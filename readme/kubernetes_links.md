@@ -25,6 +25,10 @@ Kubernetes CKAD exam tips and useful learning links list.
 -  `$ kubectl run tmp --image=curlimages/curl --rm -i  -- <host>:<port>`: Creates a temporary pod in the specified namespace that can `curl` a host. Helpful when you want to determine if a service/pod is accessible.
 - `$ kubectl -n <namespace> get ep`: get endpoints of all services in the specified namspace. This is a quick way to ensure that your service is selecting your intended pods.
 - `$ kubectl annotate <k8s object> -l key=value app:"this is the way"`: Quickly annotate several pods, a deployment, etc. You can use the selector (`-l`) argument to quickly annotate several pods at once.
+- Creating a DaemonSet imperatively:
+  As a DaemonSet cannot be created imperatively directly, you can start by using an imperative command to create a deployment:
+  - `$ kubectl create deployment nginxds --image=nginx --dry-run=client -o yaml > daemonset.yml`
+  From there, remove the `replicas: 1` and `status: {}` lines from the file, and replace `Deployment` with `Daemonset`. You can now deploy the DaemonSet with the command `$ kubectl create -f daemonset.yml`
 
 
 ## General links
