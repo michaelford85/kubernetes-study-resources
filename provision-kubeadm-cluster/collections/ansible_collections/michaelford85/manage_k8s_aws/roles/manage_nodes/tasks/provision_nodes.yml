@@ -1,0 +1,44 @@
+---
+- name: Set Worker Machine Type to large
+  ansible.builtin.set_fact:
+    machine_type: t3.large
+  when: instance_size == "large"
+
+- name: Set Worker Machine Type to xlarge
+  ansible.builtin.set_fact:
+    machine_type: t3.xlarge
+  when: instance_size == "xlarge"
+
+- name: Copy AWS Terraform Directory
+  ansible.builtin.copy:
+    src: aws_deploy
+    dest: /tmp
+    mode: 0777
+
+- name: Initialize Terraform
+  ansible.builtin.command:
+    cmd: terraform init
+    chdir: /tmp/aws_deploy
+
+- name: Provision on AWS via Terraform
+  community.general.terraform:
+    project_path: /tmp/aws_deploy
+    state: present
+    variables:
+      ec2_region: "{{ ec2_region }}"
+      ec2_prefix: "{{ cloud_prefix }}"
+      access_key: "{{ aws_access_key }}"
+      secret_key: "{{ aws_secret_key }}"
+      num_instances: "{{ num_instances }}"
+      ec2_image_id: "{{ ec2_image_id }}"
+      machine_type: "{{ machine_type }}"
+      cloud_master_volume_size: "{{ cloud_master_volume_size }}"
+      cloud_worker_volume_size: "{{ cloud_worker_volume_size}}"
+  register: terraform_output
+  no_log: true
+
+# - name: Debug Terraform output
+#   ansible.builtin.debug:
+#     var: terraform_output
+#   tags:
+#     - debug

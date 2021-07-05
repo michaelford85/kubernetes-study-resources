@@ -1,0 +1,54 @@
+---
+- name: Bootstrap Kubernetes cluster via Kubeadm
+  hosts: all
+  gather_facts: yes
+  become: yes
+  vars_files:
+    - ./vars/default-vars.yml
+
+  tasks:
+
+    - name: Include GCP k8s variables
+      ansible.builtin.include_vars:
+        file: ./vars/k8s_vars_gcp.yml
+      when: cloud_provider == "gcp"
+
+    - name: Include AWS k8s variables
+      ansible.builtin.include_vars:
+        file: ./vars/k8s_vars_aws.yml
+      when: cloud_provider == "aws_ec2"
+
+    - name: sudo apt-get update
+      ansible.builtin.apt:
+        update_cache: yes
+      become: yes
+
+    - name: Install pip3 on all nodes
+      ansible.builtin.include_role:
+        name: geerlingguy.pip
+
+    - name: Install Docker on all nodes
+      ansible.builtin.include_role:
+        name: geerlingguy.docker
+
+    - name: Install Kubernetes on all nodes
+      ansible.builtin.include_role:
+        name: geerlingguy.kubernetes
+
+    - name: Get Kubernetes version for Weave installation.
+      shell: kubectl version | base64 | tr -d '\n'
+      # changed_when: false
+      register: kubectl_version
+      when:
+        - kubernetes_pod_network.cni == 'weave'
+        - kubernetes_role == 'master'
+
+    - name: Configure Weave networking.
+      command: "{{ item }}"
+      with_items:
+        - "kubectl apply -f https://cloud.weave.works/k8s/net?k8s-version={{ kubectl_version.stdout_lines[0] }}"
+      register: weave_result
+      changed_when: "'created' in weave_result.stdout"
+      when:
+        - kubernetes_pod_network.cni == 'weave'
+        - kubernetes_role == 'master'

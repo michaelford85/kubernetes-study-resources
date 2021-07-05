@@ -1,0 +1,54 @@
+---
+- name: Teardown Kubeadm Kubernetes cluster
+  hosts: localhost
+  gather_facts: no
+  vars_files:
+    - ./vars/default-vars.yml
+    - ./credentials/aws-creds.yml
+
+  tasks:
+
+    - name: Teardown GCP infrastructure via Terraform
+      ansible.builtin.include_role:
+        name: michaelford85.manage_k8s_gcp.manage_nodes
+        tasks_from: teardown_nodes.yml
+      when: cloud_provider == "gcp"
+
+    - name: Teardown AWS infrastructure via Terraform
+      ansible.builtin.include_role:
+        name: michaelford85.manage_k8s_aws.manage_nodes
+        tasks_from: teardown_nodes.yml
+      when: cloud_provider == "aws_ec2"
+
+      # block:
+
+        # - name: Ensure AWS Terraform Directory Exists
+        #   ansible.builtin.stat:
+        #     path: /tmp/aws_deploy
+        #   register: aws_deploy_directory
+        #
+        # - name: Teardown AWS infrastructure via Terraform
+        #   community.general.terraform:
+        #     variables:
+        #       ec2_region: "{{ ec2_region }}"
+        #       ec2_prefix: "{{ cloud_prefix }}"
+        #       access_key: "{{ aws_access_key }}"
+        #       secret_key: "{{ aws_secret_key }}"
+        #     project_path: /tmp/aws_deploy
+        #     state: absent
+        #   register: terraform_output
+        #   when: aws_deploy_directory.stat.exists and aws_deploy_directory.stat.isdir
+        #   # no_log: true
+        #
+        # - name: Debug Terraform output
+        #   ansible.builtin.debug:
+        #     var: terraform_output
+        #   when: aws_deploy_directory.stat.exists and aws_deploy_directory.stat.isdir
+        #
+        # - name: delete terraform directory
+        #   ansible.builtin.file:
+        #     path: /tmp/aws_deploy
+        #     state: absent
+        #   when: aws_deploy_directory.stat.exists and aws_deploy_directory.stat.isdir
+
+      # when: cloud_provider == "aws"
