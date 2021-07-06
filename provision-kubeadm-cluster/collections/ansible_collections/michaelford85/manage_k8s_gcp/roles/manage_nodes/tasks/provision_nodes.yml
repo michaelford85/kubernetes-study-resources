@@ -2,25 +2,18 @@
 - name: Set Worker Machine Type to large
   ansible.builtin.set_fact:
     machine_type: e2-standard-2
-    # ec2_root_volume_name: /dev/sda1
   when: instance_size == "large"
 
 - name: Set Worker Machine Type to xlarge
   ansible.builtin.set_fact:
     machine_type: e2-standard-4
-    # ec2_root_volume_name: /dev/sda1
   when: instance_size == "xlarge"
 
 - name: Copy GCP Terraform Directory
   ansible.builtin.copy:
-    # src: "{{ playbook_dir }}/terraform/cloud-deploy/gcp_deploy"
     src: gcp_deploy
     dest: /tmp
     mode: 0777
-
-# - shell:
-#     cmd: ansible-vault decrypt main.tf --vault-id ~/.ssh/.vault
-#     chdir: /tmp/aws_deploy
 
 - name: Initialize Terraform
   ansible.builtin.command:

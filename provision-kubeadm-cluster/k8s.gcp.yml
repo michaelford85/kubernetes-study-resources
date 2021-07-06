@@ -1,9 +1,11 @@
 plugin: google.cloud.gcp_compute
+#Ensure this field points to the local service account json file
 service_account_file: "~/.gcp/gcp-creds.json"
 auth_kind: serviceaccount
 projects:
+#Replace with the name of your project
 - "eloquent-theme-264620"
-zones: # populate inventory with instances in these regions
+zones:
   - us-central1-a
 keyed_groups:
   - key: labels
