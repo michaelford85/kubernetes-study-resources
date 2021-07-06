@@ -1,5 +1,5 @@
 <p align="center">
-  <img height="200" title="Kubernetes Logo" src="images/k8s_logo_with_border.png">
+  <img height="200" title="Kubernetes Logo" src="../images/k8s_logo_with_border.png">
 </p>
 
 Automated kubeadm-managed cluster on AWS or GCP.
