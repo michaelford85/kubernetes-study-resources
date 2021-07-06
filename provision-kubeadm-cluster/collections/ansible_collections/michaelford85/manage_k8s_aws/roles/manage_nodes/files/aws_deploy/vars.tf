@@ -16,18 +16,6 @@ variable "machine_type" {
   default     = "xxxx"
 }
 
-variable "access_key" {
-  description = "The access key associates with the AWS account"
-  type        = string
-  default     = "xxxx"
-}
-
-variable "secret_key" {
-  description = "The secret key associated with the AWS account"
-  type        = string
-  default     = "xxxx"
-}
-
 variable "ec2_region" {
   description = "The GCP region to operate in"
   type        = string
@@ -52,10 +40,14 @@ variable "cloud_worker_volume_size" {
   default     = 10
 }
 
-/*
-variable "application" {
-  description = "The application being installed on the linux instances"
+variable "aws_key" {
+  description = "The local shared aws credentials file"
   type        = string
   default     = "xxxx"
 }
-*/
+
+variable "aws_profile" {
+  description = "The profile used from the local shared aws credentials file"
+  type        = string
+  default     = "xxxx"
+}

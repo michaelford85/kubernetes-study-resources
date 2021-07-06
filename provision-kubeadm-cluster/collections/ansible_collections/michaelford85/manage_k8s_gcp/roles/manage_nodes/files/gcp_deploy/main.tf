@@ -36,7 +36,12 @@ resource "google_compute_firewall" "k8s-worker-firewall" {
 
   allow {
     protocol = "tcp"
-    ports    = ["22", "10250", "30000-32767"]
+    ports    = ["22", "10250", "30000-32767", "6783-6784"]
+  }
+
+  allow {
+    protocol = "udp"
+    ports    = ["6783-6784"]
   }
 
   target_tags = ["k8s-role", "node"]

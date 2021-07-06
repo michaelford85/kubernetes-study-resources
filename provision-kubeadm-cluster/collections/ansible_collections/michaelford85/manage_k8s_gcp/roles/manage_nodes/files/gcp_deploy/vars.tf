@@ -46,42 +46,6 @@ variable "gcp_project" {
   default     = "nnnn"
 }
 
-variable "application" {
-  description = "The application being installed on the linux instances"
-  type        = string
-  default     = "xxxx"
-}
-
-variable "tower_username" {
-  description = "The username to log into Ansible Tower"
-  type        = string
-  default     = "xxxx"
-}
-
-variable "tower_password" {
-  description = "The password to log into Ansible Tower"
-  type        = string
-  default     = "xxxx"
-}
-
-variable "tower_ssh_username" {
-  description = "The ssh username for the Ansible Tower server"
-  type        = string
-  default     = "xxxx"
-}
-
-variable "tower_ssh_key" {
-  description = "The ssh private key for the Ansible Tower server"
-  type        = string
-  default     = "xxxx"
-}
-
-variable "tower_hostname" {
-  description = "The ssh hostname for the Ansible Tower server"
-  type        = string
-  default     = "xxxx"
-}
-
 variable "cloud_master_volume_size" {
   description = "The block storage volume size for k8s masters"
   type        = number

@@ -1,10 +1,16 @@
 ---
 kubernetes_version: '1.21'
 kubernetes_pod_network:
-  # Weave CNI.
   cni: "weave"
   cidr: '192.168.0.0/24'
 kubernetes_config_init_configuration:
   localAPIEndpoint:
     advertiseAddress: "{{ private_ip_address }}"
-kubernetes_kubeadm_init_extra_opts: "--apiserver-cert-extra-sans {{ public_ip_address }}"
+kubernetes_config_cluster_configuration:
+  networking:
+    podSubnet: "{{ kubernetes_pod_network.cidr }}"
+  kubernetesVersion: "{{ kubernetes_version_kubeadm }}"
+  apiServer:
+    certSANs:
+    - "{{ private_ip_address }}"
+    - "{{ public_ip_address }}"

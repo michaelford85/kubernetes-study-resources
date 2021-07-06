@@ -1,12 +1,18 @@
 ---
 - name: Bootstrap Kubernetes cluster via Kubeadm
   hosts: all
-  gather_facts: yes
+  gather_facts: no
   become: yes
   vars_files:
     - ./vars/default-vars.yml
 
   tasks:
+
+    - name: Wait 600 seconds for SSH connectivity
+      ansible.builtin.wait_for_connection:
+
+    - name: Gather facts
+      ansible.builtin.setup:
 
     - name: Include GCP k8s variables
       ansible.builtin.include_vars:
@@ -35,20 +41,31 @@
       ansible.builtin.include_role:
         name: geerlingguy.kubernetes
 
-    - name: Get Kubernetes version for Weave installation.
-      shell: kubectl version | base64 | tr -d '\n'
-      # changed_when: false
-      register: kubectl_version
-      when:
-        - kubernetes_pod_network.cni == 'weave'
-        - kubernetes_role == 'master'
+    - name: "Ensure /tmp/{{ cloud_prefix }}-config does not exist"
+      ansible.builtin.file:
+        path: "/tmp/{{ cloud_prefix }}-config"
+        state: absent
+      delegate_to: localhost
+      run_once: yes
 
-    - name: Configure Weave networking.
-      command: "{{ item }}"
-      with_items:
-        - "kubectl apply -f https://cloud.weave.works/k8s/net?k8s-version={{ kubectl_version.stdout_lines[0] }}"
-      register: weave_result
-      changed_when: "'created' in weave_result.stdout"
+    - name: "Copy master node kubeconfig file to local /tmp/{{ cloud_prefix }}-config"
+      ansible.builtin.fetch:
+        src: /root/.kube/config
+        dest: "/tmp/{{ cloud_prefix }}-config"
+        flat: yes
+      when: kubernetes_role == 'master'
+      run_once: yes
+
+    - ansible.builtin.debug:
+        msg: "Be sure to change the server in /tmp/{{ cloud_prefix }}-config from {{ private_ip_address }} to {{ public_ip_address }}."
       when:
-        - kubernetes_pod_network.cni == 'weave'
         - kubernetes_role == 'master'
+        - cloud_provider == "aws_ec2"
+      run_once: yes
+
+    - ansible.builtin.debug:
+        msg: "Be sure to change the server in /tmp/{{ cloud_prefix }}-config from {{ networkInterfaces[0].networkIP }} to {{ networkInterfaces[0].accessConfigs[0].natIP }}."
+      when:
+        - kubernetes_role == 'master'
+        - cloud_provider == "gcp"
+      run_once: yes

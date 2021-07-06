@@ -7,10 +7,10 @@
 - name: Teardown AWS infrastructure via Terraform
   community.general.terraform:
     variables:
+      aws_key: "{{ aws_local_credentials_file }}"
+      aws_profile: "{{ aws_credential_profile }}"
       ec2_region: "{{ ec2_region }}"
       ec2_prefix: "{{ cloud_prefix }}"
-      access_key: "{{ aws_access_key }}"
-      secret_key: "{{ aws_secret_key }}"
     project_path: /tmp/aws_deploy
     state: absent
   register: terraform_output

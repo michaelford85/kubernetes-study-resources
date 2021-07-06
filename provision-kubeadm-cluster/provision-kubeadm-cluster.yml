@@ -1,12 +1,10 @@
 ---
 - name: Set up Kubernetes cluster via Kubeadm
   hosts: localhost
+  connection: local
   gather_facts: no
-  vars:
-    machine_type: default
   vars_files:
     - ./vars/default-vars.yml
-    - ./credentials/aws-creds.yml
 
   tasks:
 

@@ -3,9 +3,9 @@ working_dir: /tmp
 
 #specifies which cloud to deploy resources to
 #acceptable options: aws_ec2, gcp
-cloud_provider: gcp
-num_instances: 2
-instance_size: large
+cloud_provider: aws_ec2
+num_instances: 4
+instance_size: xlarge #acceptable options: large, xlarge
 
 #Global parameters
 cloud_prefix: kubeadm-cluster
@@ -13,8 +13,8 @@ cloud_master_volume_size: 50
 cloud_worker_volume_size: 100
 
 #AWS-specific parameters
-aws_access_key: "{{ vaulted_access_key }}"
-aws_secret_key: "{{ vaulted_secret_key }}"
+aws_local_credentials_file: "~/.aws/credentials"
+aws_credential_profile: "default"
 ec2_region: us-east-2
 ec2_image_id: ami-00399ec92321828f5 #Ubuntu 20.04
 ec2_wait: yes #wait for newly created instances to reach desired state before returning
@@ -23,6 +23,8 @@ ec2_vpc_cidr: "192.168.0.0/16"
 aws_instance_username: ubuntu
 
 #GCP parameters
+gcp_local_credentials_file: "/Users/michaelford/.gcp/gcp-creds.json"
+gcp_project: "eloquent-theme-264620"
 gcp_region: us-central1
 gcp_zone: us-central1-a
 gcp_vpc_subnet: 192.168.0.0/28

@@ -32,8 +32,8 @@
     project_path: /tmp/gcp_deploy
     state: present
     variables:
-      gcp_key: "{{ playbook_dir }}/credentials/gcp-creds.json"
-      gcp_project: "eloquent-theme-264620"
+      gcp_key: "{{ gcp_local_credentials_file }}"
+      gcp_project: "{{ gcp_project }}"
       gcp_region: "{{ gcp_region }}"
       gcp_zone: "{{ gcp_zone }}"
       gcp_prefix: "{{ cloud_prefix }}"

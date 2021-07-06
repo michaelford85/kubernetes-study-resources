@@ -7,8 +7,8 @@
 - name: Teardown GCP infrastructure via Terraform
   community.general.terraform:
     variables:
-      gcp_key: "{{ playbook_dir }}/credentials/gcp-creds.json"
-      gcp_project: "eloquent-theme-264620"
+      gcp_key: "{{ gcp_local_credentials_file }}"
+      gcp_project: "{{ gcp_project }}"
     project_path: /tmp/gcp_deploy
     state: absent
   register: terraform_output

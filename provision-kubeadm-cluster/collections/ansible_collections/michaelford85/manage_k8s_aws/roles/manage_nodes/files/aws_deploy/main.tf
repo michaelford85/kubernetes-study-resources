@@ -1,7 +1,7 @@
 provider "aws" {
   region     = var.ec2_region
-  access_key = var.access_key
-  secret_key = var.secret_key
+  shared_credentials_file = var.aws_key
+  profile                 = var.aws_profile
 }
 
 resource "aws_vpc" "k8s-vpc" {
@@ -108,6 +108,22 @@ resource "aws_security_group" "k8s-worker-sg" {
     from_port   = 30000
     to_port     = 32767
     protocol    = "tcp"
+    cidr_blocks = ["0.0.0.0/0"]
+  }
+
+  ingress {
+    description = "Weave CNI TCP"
+    from_port   = 6783
+    to_port     = 6784
+    protocol    = "tcp"
+    cidr_blocks = ["0.0.0.0/0"]
+  }
+
+  ingress {
+    description = "Weave CNI UDP"
+    from_port   = 6783
+    to_port     = 6784
+    protocol    = "udp"
     cidr_blocks = ["0.0.0.0/0"]
   }
 

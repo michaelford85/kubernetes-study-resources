@@ -7,6 +7,10 @@ keyed_groups:
     prefix: "k8s"
 filters:
   instance-state-name: running
+  tag:application: k8s
+  tag:role:
+   - node
+   - master
 hostnames:
   - tag:Name
 compose:
