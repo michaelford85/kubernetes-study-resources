@@ -54,18 +54,15 @@
         dest: "/tmp/{{ cloud_prefix }}-config"
         flat: yes
       when: kubernetes_role == 'master'
-      run_once: yes
 
     - ansible.builtin.debug:
         msg: "Be sure to change the server in /tmp/{{ cloud_prefix }}-config from {{ private_ip_address }} to {{ public_ip_address }}."
       when:
         - kubernetes_role == 'master'
         - cloud_provider == "aws_ec2"
-      run_once: yes
 
     - ansible.builtin.debug:
         msg: "Be sure to change the server in /tmp/{{ cloud_prefix }}-config from {{ networkInterfaces[0].networkIP }} to {{ networkInterfaces[0].accessConfigs[0].natIP }}."
       when:
         - kubernetes_role == 'master'
         - cloud_provider == "gcp"
-      run_once: yes

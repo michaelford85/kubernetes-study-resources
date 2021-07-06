@@ -1,0 +1,113 @@
+---
+# - name: Install Hashicorp vault via helm
+#   hosts: all
+#   gather_facts: no
+#   become: yes
+#   vars_files:
+#     - ./vars/default-vars.yml
+#
+#   tasks:
+#
+#     - name: Wait 600 seconds for SSH connectivity
+#       ansible.builtin.wait_for_connection:
+#
+#     - name: Gather facts
+#       ansible.builtin.setup:
+#
+#     - name: curl https://baltocdn.com/helm/signing.asc | sudo apt-key add -
+#       ansible.builtin.shell:
+#         cmd: "curl https://baltocdn.com/helm/signing.asc | sudo apt-key add -"
+#       when: kubernetes_role == "master"
+#
+#     - name: Install apt-transport-https
+#       ansible.builtin.apt:
+#         name: apt-transport-https
+#         update_cache: yes
+#       when: kubernetes_role == "master"
+#
+#     - name: echo "deb https://baltocdn.com/helm/stable/debian/ all main" | sudo tee /etc/apt/sources.list.d/helm-stable-debian.list
+#       ansible.builtin.shell:
+#         cmd: "echo 'deb https://baltocdn.com/helm/stable/debian/ all main' | sudo tee /etc/apt/sources.list.d/helm-stable-debian.list"
+#       when: kubernetes_role == "master"
+#
+#     - name: Install helm
+#       ansible.builtin.apt:
+#         name: helm
+#         update_cache: yes
+#       when: kubernetes_role == "master"
+
+
+- name: Install Hashicorp vault via helm
+  hosts: all
+  # connection: local
+  gather_facts: no
+  become: yes
+  vars_files:
+    - ./vars/default-vars.yml
+
+  tasks:
+
+    # - name: apt-get update
+    #   ansible.builtin.apt:
+    #     update_cache: yes
+    #   when: kubernetes_role == "master"
+    #
+    # - name: apt-get upgrade
+    #   ansible.builtin.apt:
+    #     upgrade: yes
+    #   when: kubernetes_role == "master"
+
+    - name: Install snapd
+      ansible.builtin.apt:
+        name: snapd
+        force: yes
+      when: kubernetes_role == "master"
+
+    - name: Install Helm
+      shell: "snap install helm --classic"
+      when: kubernetes_role == "master"
+      register: successfully_installed
+
+    - name: Ensure helm was installed successfully
+      ansible.builtin.assert:
+        that:
+          - successfully_installed.rc == 0
+        msg: "A non-zero return code means helm was not installed successfully"
+      when: kubernetes_role == "master"
+
+    - name: Install pip3
+      ansible.builtin.apt:
+        name: python3-pip
+        update_cache: yes
+      when: kubernetes_role == "master"
+
+    - name: Install kubernetes python package
+      pip:
+        name: kubernetes
+      when: kubernetes_role == "master"
+
+    - name: Ensure vault namespace exists
+      kubernetes.core.k8s:
+        name: vault
+        api_version: v1
+        kind: Namespace
+        state: present
+      when: kubernetes_role == "master"
+
+    - name: Add helm repo
+      kubernetes.core.helm_repository:
+        name: vault-helm
+        repo_url: "https://helm.releases.hashicorp.com"
+      when: kubernetes_role == "master"
+
+    - name: Deploy latest version of vault chart inside vault namespace with values
+      kubernetes.core.helm:
+        name: vault
+        chart_ref: hashicorp/vault
+        release_namespace: vault
+        values:
+          dev:
+            enabled: true
+            devRootToken: "ansible"
+
+      when: kubernetes_role == "master"

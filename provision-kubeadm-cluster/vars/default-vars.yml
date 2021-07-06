@@ -4,7 +4,7 @@ working_dir: /tmp
 #specifies which cloud to deploy resources to
 #acceptable options: aws_ec2, gcp
 cloud_provider: aws_ec2
-num_instances: 4
+num_instances: 2
 instance_size: xlarge #acceptable options: large, xlarge
 
 #Global parameters
